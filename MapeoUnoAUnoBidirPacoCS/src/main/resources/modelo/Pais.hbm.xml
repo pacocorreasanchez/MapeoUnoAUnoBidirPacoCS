@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="es.albarregas.beans.Pais" table="paises">
+        
+        <id column="id" name="id" type="integer">
+            <generator class="identity"/>
+        </id>
+        
+        <property name="nombrePais" length="30" />
+        
+        <one-to-one name="presidente" cascade="all" />
+    </class>
+</hibernate-mapping>
